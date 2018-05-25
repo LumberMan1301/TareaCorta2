@@ -13,7 +13,7 @@ public class Pila<T>
         this.capacidad = 0;
     }
 
-    public void Push(T dato){
+    public void push(T dato){
         PushP(dato);
 
     }
@@ -37,7 +37,7 @@ public class Pila<T>
     }
 
 
-    public void Peek(){
+    public void peek(){
         PeekP();
     }
     private T PeekP(){
@@ -45,7 +45,7 @@ public class Pila<T>
         return (T)this.tail.getData();
     }
 
-    public void Pop(){
+    public void pop(){
         PopP();
     }
     private void PopP(){
