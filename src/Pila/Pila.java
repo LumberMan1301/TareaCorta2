@@ -3,25 +3,19 @@ package Pila;
 public class Pila<T>
 {
     private NodeLista<T> tail;
-    private NodeLista<T> head;
     private int capacidad;
 
     public Pila()
     {
         this.tail = null;
-        this.head = null;
         this.capacidad = 0;
     }
 
+    
     public void push(T dato){
-        PushP(dato);
-
-    }
-    private void PushP(T dato){
         NodeLista<T> nodo = new NodeLista(dato);
         if (this.capacidad == 0)
         {
-            this.head = nodo;
             this.tail = nodo;
             this.capacidad += 1;
         }
@@ -37,23 +31,20 @@ public class Pila<T>
     }
 
 
-    public void peek(){
-        PeekP();
-    }
-    private T PeekP(){
+    public T peek(){
         System.out.println("El elemento solicitado es: "+this.tail.getData());
         return (T)this.tail.getData();
     }
 
-    public void pop(){
-        PopP();
-    }
-    private void PopP(){
+    
+    public T pop(){
+    	NodeLista<T> actual = this.tail;
         if (this.capacidad == 1)
         {
+        	
             this.tail = null;
-            this.head = null;
             this.capacidad -= 1;
+            
         }
         else
         {
@@ -63,6 +54,7 @@ public class Pila<T>
             this.tail = this.tail.getPrev();
 
         }
+		return (T)actual;
 
     }
 
@@ -76,7 +68,8 @@ public class Pila<T>
     }
     private  void printP(){
 
-        NodeLista<T> aux = this.head;
+
+        NodeLista<T> aux = this.tail;
         if (aux == null)
         {
             System.out.println("La pila esta Vacia");
@@ -94,5 +87,12 @@ public class Pila<T>
             }
         }
 
+    }
+
+    public boolean empty() {
+		if (this.capacidad == 0)
+			return true;
+    	return false;
+    	
     }
 }

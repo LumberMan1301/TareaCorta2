@@ -9,27 +9,20 @@ import arbolgrafico.Nodo1;
 import java.util.*;
 import javax.swing.JPanel;
 
+import Pila.Pila;
+
 /**
  * Clase para generar arboles binarios a partir de expresiones aritmeticas
- * @author  Amparo L�pez Gaona
- * @version 1a. ed.
+
  */
 public class ArbodeExpresiones {
-      Stack < Nodo1 > pOperandos = new Stack < Nodo1> ();
-       Stack < String > pOperadores = new Stack < String > ();
- 
+      Stack <Nodo1> pOperandos = new Stack <Nodo1> ();
+      Stack < String > pOperadores = new Stack < String > ();
       
-      
-          
-                   
-         
- 
-
-     
-   // Pila pOperandos;               // Pila de operandos
-   // Pila pOperadores;              // Pila de operadores
-    final String blanco;           // Cadena de espacios en blanco
-    final String operadores;       // Cadena con operadores para expresiones
+      // Pila pOperandos;               // Pila de operandos
+      // Pila pOperadores;              // Pila de operadores
+      final String blanco;           // Cadena de espacios en blanco
+      final String operadores;       // Cadena con operadores para expresiones
 
   /**
    * Constructor por omision
@@ -37,9 +30,6 @@ public class ArbodeExpresiones {
     
    
     public ArbodeExpresiones() {
-        
-	//pOperandos = new Pila();
-	//pOperadores = new Pila();
 	blanco = " \t";
 	operadores = ")+-*/%^(";  //acomodados por precedencia;
     }
