@@ -180,7 +180,7 @@ public class Gui extends javax.swing.JFrame {
         this.jDesktopPane1.removeAll();
         Rectangle tamano = this.jInternalFrame2.getBounds();
         this.jInternalFrame2 = null;
-        this.jInternalFrame2 = new JInternalFrame("Representación gráfica", true);
+        this.jInternalFrame2 = new JInternalFrame("Arbol de expresion", true);
         this.jDesktopPane1.add(this.jInternalFrame2, JLayeredPane.DEFAULT_LAYER);
         this.jInternalFrame2.setVisible(true);
         this.jInternalFrame2.setBounds(tamano);
