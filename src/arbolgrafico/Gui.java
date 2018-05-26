@@ -37,17 +37,7 @@ public class Gui extends javax.swing.JFrame {
     }
 
     private void inicializar(boolean enable) {
-      //  this.opciones.setEnabled(enable);
-       // this.cmdDarHojas.setEnabled(enable);
-   //     this.cmdBuscar.setEnabled(enable);
-    //    this.cmdBuscarPadre.setEnabled(enable);
-       // this.botonBorrar.setEnabled(enable);
-    //    this.botonPodar.setEnabled(enable);
-    //    this.botonBalance.setEnabled(enable);
-      //  this.botonBMayor.setEnabled(enable);
-       // this.botonBMenor.setEnabled(enable);
-       // this.botonCambiar.setEnabled(enable);
-       // this.botonCambiarValores.setEnabled(enable);
+      
     }
 
     /**
@@ -184,19 +174,7 @@ public class Gui extends javax.swing.JFrame {
     
     public void complementos(){
         this.repintarArbol();
-        /*
-        this.lblCnodos.setText("");
-        this.lblCnodos.setText(this.simulador.CantidadNodos());
-
-        this.lblChojas.setText("");
-        this.lblChojas.setText(this.simulador.CantidadHojas());
-
-        this.lblVmenor.setText("");
-        this.lblVmenor.setText(this.simulador.menorValor());
-
-        this.lblVmayor.setText("");
-        this.lblVmayor.setText(this.simulador.mayorValor());
-        */
+      
     }
     private void repintarArbol() {
         this.jDesktopPane1.removeAll();
@@ -214,11 +192,6 @@ public class Gui extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -235,7 +208,7 @@ public class Gui extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+       
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

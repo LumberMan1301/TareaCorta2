@@ -27,17 +27,7 @@ public class ArbolExpresionGrafico extends JPanel
      * @param miExpresion: dato de tipo ArbolExpresion que contiene el Arbol a
      * dibujar.
      */
-    /*
-    public ArbolExpresionGrafico(Arbol miArbol) 
-    {
-          this.miArbol = miArbol;
-          this.setBackground(Color.WHITE);
-          posicionNodos = new HashMap();
-          subtreeSizes = new HashMap();
-          dirty = true;
-          repaint();      
-    }
-    */
+    
  public ArbolExpresionGrafico( ArbodeExpresiones miArbol) 
     {
           this.miArbol = miArbol;
