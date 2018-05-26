@@ -4,7 +4,7 @@ package Stack;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Stack1<Item> implements Iterable<Item> {
+public class Stack<Item> implements Iterable<Item> {
     private int n;          // size of the stack
     private Node first;     // top of stack
 
@@ -17,7 +17,7 @@ public class Stack1<Item> implements Iterable<Item> {
    /**
      * Initializes an empty stack.
      */
-    public Stack1() {
+    public Stack() {
         first = null;
         n = 0;
     }

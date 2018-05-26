@@ -1,18 +1,17 @@
 package arbolgrafico;
 import arbolgrafico.Nodo1;
-
 import java.util.*;
 import javax.swing.JPanel;
 
 
-import Stack.Stack1;
+import Stack.Stack;
 
 /**
  * Clase para generar arboles binarios a partir de expresiones aritmeticas
  */
 public class ArbodeExpresiones {
-      Stack1 <Nodo1> pOperandos = new Stack1 <Nodo1> ();
-      Stack1 < String > pOperadores = new Stack1 <String> ();
+      Stack <Nodo1> pOperandos = new Stack <Nodo1> ();
+      Stack < String > pOperadores = new Stack <String> ();
      
       final String blanco;           // Cadena de espacios en blanco
       final String operadores;       // Cadena con operadores para expresiones
@@ -44,8 +43,6 @@ public class ArbodeExpresiones {
     public Nodo1 construirArbol(String expresion) {
        	StringTokenizer tokenizer;
        	String token;
-	
-
        	tokenizer = new StringTokenizer(expresion, blanco+operadores, true);
        	while (tokenizer.hasMoreTokens()) {
        		token = tokenizer.nextToken();
@@ -90,10 +87,9 @@ public class ArbodeExpresiones {
    * Metodo privado para almacenar en la pila un subarbol
    */
     private void guardarSubArbol() {
-	Nodo1 op2 = (Nodo1) pOperandos.pop();
-	Nodo1 op1 = (Nodo1)pOperandos.pop();
-	pOperandos.push( new Nodo1(op2, pOperadores.pop(), op1));
-
+    	Nodo1 op2 = (Nodo1) pOperandos.pop();
+    	Nodo1 op1 = (Nodo1)pOperandos.pop();
+    	pOperandos.push( new Nodo1(op2, pOperadores.pop(), op1));
     }
 
     /**
@@ -101,13 +97,11 @@ public class ArbodeExpresiones {
      * @param n -- nodo raiz
      */
     public void imprime(Nodo1 n) {
-	if (n != null) {
-	   
-	    
-	    imprime(n.getNodoDerecho());
-            System.out.print(n.getInformacion()+" ");
-             imprime(n.getNodoIzquierdo());
-	}
+		if (n != null) {
+		    imprime(n.getNodoDerecho());
+	        System.out.print(n.getInformacion()+" ");
+	        imprime(n.getNodoIzquierdo());
+		}
     }
 
     /**((3-4)*(3+5))
@@ -128,17 +122,13 @@ public class ArbodeExpresiones {
      * @param n -- nodo raiz
      */
     public void imprimePre(Nodo1 n) {
-	if (n != null) {
-	    System.out.print(n.getInformacion()+" ");
-	   
-	   
-            
-              imprimePre(n.getNodoDerecho());
-               imprimePre(n.getNodoIzquierdo());
-	}
+		if (n != null) {
+		    System.out.print(n.getInformacion()+" "); 
+		    imprimePre(n.getNodoDerecho());
+	        imprimePre(n.getNodoIzquierdo());
+		}
     }
- public JPanel getdibujo() {
-       
+    public JPanel getdibujo() {
        return new ArbolExpresionGrafico(this);
        
     }
