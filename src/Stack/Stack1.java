@@ -8,7 +8,7 @@ public class Stack1<Item> implements Iterable<Item> {
     private int n;          // size of the stack
     private Node first;     // top of stack
 
-    // helper linked list class
+    // Nodo para Stack1
     private class Node {
         private Item item;
         private Node next;

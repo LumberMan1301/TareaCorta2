@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package arbolgrafico;
 
-/**
- *
- * @author ESTUDIANTES
- */
 public class Nodo1 {
     
     private String informacion;
@@ -37,12 +29,6 @@ public class Nodo1 {
       
     }
 
-  
-    
-    
-    
-    
-    
     public Nodo1 getPadre() {
         return padre;
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package arbolgrafico;
 import arbolgrafico.Nodo1;
 
@@ -14,7 +9,6 @@ import Stack.Stack1;
 
 /**
  * Clase para generar arboles binarios a partir de expresiones aritmeticas
-
  */
 public class ArbodeExpresiones {
       Stack1 <Nodo1> pOperandos = new Stack1 <Nodo1> ();
@@ -157,7 +151,7 @@ public class ArbodeExpresiones {
         Nodo1 raiz = expr.construirArbol(expresion);
 		System.out.print("El arbol es ");
 		expr.imprime(raiz);
-                expr.imprimePre(raiz);
+        expr.imprimePre(raiz);
 	  
     }
 }

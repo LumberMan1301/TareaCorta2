@@ -1,8 +1,4 @@
 package arbolgrafico;
-/**
- *
- * @author ploks
- */
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
