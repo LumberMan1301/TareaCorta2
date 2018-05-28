@@ -1,17 +1,17 @@
 
 package Stack;
 
-import java.util.Iterator;
+
 import java.util.NoSuchElementException;
 
-public class Stack<Item> implements Iterable<Item> {
+public class Stack<Item>{
     private int n;          // size of the stack
-    private Node first;     // top of stack
+    private Node<Item> first;     // top of stack
 
     // Nodo para Stack1
-    private class Node {
+    private class Node<Item> {
         private Item item;
-        private Node next;
+        private Node<Item> next;
     }
 
    /**
@@ -85,35 +85,13 @@ public class Stack<Item> implements Iterable<Item> {
      *
      * @return the sequence of items in this stack in LIFO order, separated by spaces
      */
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        for (Item item : this) {
-            s.append(item);
-            s.append(' ');
-        }
-        return s.toString();
-    }
-       
-
-    /**
-     * Returns an iterator to this stack that iterates through the items in LIFO order.
-     *
-     * @return an iterator to this stack that iterates through the items in LIFO order
-     */
-    public Iterator<Item> iterator()  { return new ListIterator();  }
-
-    // an iterator, doesn't implement remove() since it's optional
-    private class ListIterator implements Iterator<Item> {
-        private Node current = first;
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
-
-        public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
-            Item item = current.item;
-            current = current.next; 
-            return item;
-        }
+    public void print() {
+    	Node current = this.first;
+    	for (int i = 0; i < this.size();i++) {
+    		System.out.print(current.item+" ");
+    		current = current.next;
+    	}
+    	System.out.println("");
     }
 
 

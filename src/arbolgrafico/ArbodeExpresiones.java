@@ -71,6 +71,8 @@ public class ArbodeExpresiones {
 	    }
 	}
 	//Sacar todo lo que queda
+    pOperadores.print();
+    //pOperandos.print();
 	raiz = (Nodo1)pOperandos.peek();
 	while (!pOperadores.empty()) {
 	    if (pOperadores.peek().equals("(")) {
@@ -80,6 +82,8 @@ public class ArbodeExpresiones {
 	    raiz = (Nodo1) pOperandos.peek() ;
 	    }
 	}
+	
+	
 	return raiz;
     }
 
@@ -87,6 +91,7 @@ public class ArbodeExpresiones {
    * Metodo privado para almacenar en la pila un subarbol
    */
     private void guardarSubArbol() {
+    	
     	Nodo1 op2 = (Nodo1) pOperandos.pop();
     	Nodo1 op1 = (Nodo1)pOperandos.pop();
     	pOperandos.push( new Nodo1(op2, pOperadores.pop(), op1));
@@ -133,7 +138,7 @@ public class ArbodeExpresiones {
        
     }
     public static void main (String[] pps) {
-	 ArbodeExpresiones expr= new  ArbodeExpresiones();
+    	ArbodeExpresiones expr= new  ArbodeExpresiones();
  
         Scanner leer = new Scanner (System.in);
         System.out.println("Digite la expresion aritmetica");
@@ -141,7 +146,8 @@ public class ArbodeExpresiones {
         Nodo1 raiz = expr.construirArbol(expresion);
 		System.out.print("El arbol es ");
 		expr.imprime(raiz);
-        expr.imprimePre(raiz);
+		
+       
 	  
     }
 }

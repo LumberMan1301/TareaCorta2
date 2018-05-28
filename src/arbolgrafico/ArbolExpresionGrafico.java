@@ -166,9 +166,8 @@ private void dibujarArbol(Graphics2D g, Nodo1 n, int puntox, int puntoy, int yof
          
          Graphics2D g2d = (Graphics2D) g;
          g2d.translate(getWidth() / 2, parent2child);
-       //  dibujarArbol(g2d, this.miArbol.getRaiz(), Integer.MAX_VALUE, Integer.MAX_VALUE, 
-                   dibujarArbol(g2d, this.miArbol.getRaiz(), Integer.MAX_VALUE, Integer.MAX_VALUE, 
-                  fm.getLeading() + fm.getAscent());
+         dibujarArbol(g2d, this.miArbol.getRaiz(), Integer.MAX_VALUE, Integer.MAX_VALUE, 
+         fm.getLeading() + fm.getAscent());
          fm = null;
    }
    

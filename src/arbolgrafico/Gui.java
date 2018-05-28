@@ -148,7 +148,7 @@ public class Gui extends javax.swing.JFrame {
     private void botonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarActionPerformed
         try {
           
-            String dato = JOptionPane.showInputDialog("Digite dato String para insertar:");
+            String dato = JOptionPane.showInputDialog("Digite dato expresion para insertar:");
             if (this.simulador.insertar(dato)) {
                 JOptionPane.showMessageDialog(null, "El dato fue insertado correctamente", " ...", 1);
                 this.inicializar(true);
